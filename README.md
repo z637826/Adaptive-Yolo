@@ -5,11 +5,7 @@
   <a href="https://cheinralational.github.io/JianLu.io/"><img src="https://img.shields.io/badge/First_Author-Jian_Lu-blue?style=flat-square" alt="First Author"></a>
   <a href="https://github.com/zhangcbb"><img src="https://img.shields.io/badge/Corresponding_Author-Chenbin_Zhang-green?style=flat-square" alt="Corresponding Author"></a>
 </p>
-
-
-
 <p align="center">
-  <br>
   <strong>The only real‑time detector that exceeds 43 mAP on all four challenging benchmarks – game, fisheye, drone, and panorama – simultaneously.</strong>
 </p>
 
