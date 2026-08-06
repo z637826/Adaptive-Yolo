@@ -1,6 +1,8 @@
-
 <p align="center">
-  <img src="https://img.shields.io/badge/YOLOv14-Cross--Domain_Detection-red?style=for-the-badge&logo=github" alt="YOLOv14" width="300"/>
+  <a href="https://arxiv.org/abs/2608.04720"><img src="https://img.shields.io/badge/arXiv-2608.04720-b31b1b.svg?style=flat-square" alt="arXiv"></a>
+  <a href="https://github.com/zhangcbb/yolov14"><img src="https://img.shields.io/badge/GitHub-zhangcbb/yolov14-181717?style=flat-square&logo=github" alt="GitHub"></a>
+  <a href="https://cheinralational.github.io/JianLu.io/"><img src="https://img.shields.io/badge/First_Author-Jian_Lu-blue?style=flat-square" alt="First Author"></a>
+  <a href="https://github.com/zhangcbb"><img src="https://img.shields.io/badge/Corresponding_Author-Chenbin_Zhang-green?style=flat-square" alt="Corresponding Author"></a>
 </p>
 
 <h1 align="center">🚀 YOLOv14</h1>
@@ -11,58 +13,10 @@
   <strong>The only real‑time detector that exceeds 43 mAP on all four challenging benchmarks – game, fisheye, drone, and panorama – simultaneously.</strong>
 </p>
 
-<p align="center">
-  <a href="https://arxiv.org/abs/2608.04720">
-    <img src="https://img.shields.io/badge/arXiv-2608.04720-b31b1b.svg?style=flat-square" alt="arXiv">
-  </a>
-  <a href="https://arxiv.org/pdf/2608.04720">
-    <img src="https://img.shields.io/badge/Paper-PDF-green?style=flat-square" alt="Paper PDF">
-  </a>
-  <a href="https://github.com/zhangcbb/yolov14">
-    <img src="https://img.shields.io/badge/GitHub-zhangcbb/yolov14-181717?style=flat-square&logo=github" alt="GitHub">
-  </a>
-  <br>
-  <a href="#-performance-highlights">
-    <img src="https://img.shields.io/badge/COCO_mAP-49.1_(s)--brightgreen?style=flat-square" alt="COCO mAP">
-  </a>
-  <a href="#-performance-highlights">
-    <img src="https://img.shields.io/badge/Throughput-344_FPS-blue?style=flat-square" alt="FPS">
-  </a>
-  <a href="#-performance-highlights">
-    <img src="https://img.shields.io/badge/Latency-2.91_ms_(T4)-orange?style=flat-square" alt="Latency">
-  </a>
-  <br>
-  <a href="#-project-roadmap--status">
-    <img src="https://img.shields.io/badge/Status-Paper_&_Code_Ready-yellow?style=flat-square" alt="Status">
-  </a>
-  <a href="#-model-variants">
-    <img src="https://img.shields.io/badge/Variants-5_Configs-ff69b4?style=flat-square" alt="Variants">
-  </a>
-  <a href="#license">
-    <img src="https://img.shields.io/badge/License-AGPL--3.0-blue?style=flat-square" alt="License">
-  </a>
-</p>
-
----
-
-## 👥 Authors
-
-| Role | Name | Affiliation | Links |
-|------|------|-------------|-------|
-| **First Author** | **Jian Lu** (鲁健) | Nanjing University of Posts and Telecommunications | [Academic Page](https://cheinralational.github.io/JianLu.io/) |
-| **Co-author** | Jinling Jia (贾金灵) | Nanjing University of Posts and Telecommunications | — |
-| **Co-author** | Jone Yawl | — | — |
-| **Corresponding Author** | **Chenbin Zhang** (张晨斌) | Nanjing University of Posts and Telecommunications | [GitHub](https://github.com/zhangcbb/yolov14) · [Baidu Baike](https://baike.baidu.com/item/%E5%BC%A0%E6%99%A8%E6%96%8C/65145873) |
-
-**Chenbin Zhang** is an undergraduate student at the School of Automation and School of Artificial Intelligence, Nanjing University of Posts and Telecommunications. He is currently pursuing an integrated Bachelor–Master–PhD program in Control Science and Engineering. He has open-sourced nearly 100 research and practice projects, earning recognition within the open-source community.
-
-**Jian Lu** is a graduate of the Intelligent Science and Technology program at Nanjing University of Posts and Telecommunications. His research interests include machine vision and AI algorithms, with a focus on bridging theoretical research and engineering practice.
-
 ---
 
 ## 📋 Table of Contents
 
-- [Authors](#-authors)
 - [Why YOLOv14?](#-why-yolov14)
 - [Performance Highlights](#-performance-highlights)
 - [Project Roadmap & Status](#-project-roadmap--status)
@@ -259,4 +213,3 @@ python app.py
   <br>
   <sub>⭐ If this project helps you, please give us a star!</sub>
 </p>
-```
