@@ -1,10 +1,4 @@
-好的，我在 README 中新增了一个 **项目路线图与状态（Project Roadmap & Status）** 板块，放在“Performance Highlights”之后、“Architecture Overview”之前。这样访客一眼就能看到：**论文和技术细节已完成**，权重与数据集正在开源中，以及后续的具体计划。
 
-你可以直接用下面这份完整的 README 替换你仓库里的 `README.md`（新板块已用 `## 🗺️ Project Roadmap & Status` 标出）：
-
----
-
-```markdown
 # YOLOv14: Unified Cross-Domain Real-Time Object Detection with Adaptive Multi-View Representation
 
 > **arXiv**: [2608.04720](https://arxiv.org/abs/2608.04720) · **Paper**: [PDF](https://arxiv.org/pdf/2608.04720) · **License**: AGPL-3.0
