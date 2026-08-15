@@ -1,0 +1,50 @@
+# YOLOv14-Deformable 🚀
+# YOLOv14 with Deformable Area-Attention (D-AAttn)
+# Handles fisheye, wide-angle, and geometric distortions via learnable
+# deformation fields in the attention mechanism.
+#
+# Usage:
+#   model = YOLO('YOLOv14-deformable.yaml')
+
+# Parameters
+nc: 80  # number of classes
+scales:
+  # [depth, width, max_channels]
+  n: [0.50, 0.25, 1024]  # 2.6M params
+  s: [0.50, 0.50, 1024]  # 9.2M params
+  m: [0.50, 1.00, 512]   # 19.8M params
+  l: [1.00, 1.00, 512]   # 26.7M params
+  x: [1.00, 1.50, 512]   # 59.6M params
+
+# YOLOv14-Deformable backbone
+backbone:
+  # [from, repeats, module, args]
+  - [-1, 1, Conv, [64, 3, 2]]                 # 0-P1/2
+  - [-1, 1, Conv, [128, 3, 2, 1, 2]]          # 1-P2/4
+  - [-1, 2, C3k2, [256, False, 0.25]]
+  - [-1, 1, Conv, [256, 3, 2, 1, 4]]          # 3-P3/8
+  - [-1, 2, C3k2, [512, False, 0.25]]
+  - [-1, 1, Conv, [512, 3, 2]]                # 5-P4/16
+  - [-1, 4, DeformableA2C2f, [512, True, 4]]  # 6 - Deformable
+  - [-1, 1, Conv, [1024, 3, 2]]               # 7-P5/32
+  - [-1, 4, DeformableA2C2f, [1024, True, 1]] # 8 - Deformable
+
+# YOLOv14-Deformable head
+head:
+  - [-1, 1, nn.Upsample, [None, 2, "nearest"]]
+  - [[-1, 6], 1, Concat, [1]]                 # cat backbone P4
+  - [-1, 2, DeformableA2C2f, [512, False, -1]] # 11 - Deformable
+
+  - [-1, 1, nn.Upsample, [None, 2, "nearest"]]
+  - [[-1, 4], 1, Concat, [1]]                 # cat backbone P3
+  - [-1, 2, DeformableA2C2f, [256, False, -1]] # 14 - Deformable
+
+  - [-1, 1, Conv, [256, 3, 2]]
+  - [[-1, 11], 1, Concat, [1]]                # cat head P4
+  - [-1, 2, DeformableA2C2f, [512, False, -1]] # 17 - Deformable
+
+  - [-1, 1, Conv, [512, 3, 2]]
+  - [[-1, 8], 1, Concat, [1]]                 # cat head P5
+  - [-1, 2, C3k2, [1024, True]]               # 20 (P5/32-large)
+
+  - [[14, 17, 20], 1, Detect, [nc]]           # Detect(P3, P4, P5)
