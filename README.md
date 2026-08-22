@@ -1,4 +1,4 @@
-<h1 align="center">🚀 YOLOv14：Unified Cross-Domain Real‑Time Object Detection with Adaptive Multi‑View Representation</h1>
+<h1 align="center">🚀 YOLO：Unified Cross-Domain Real‑Time Object Detection with Adaptive Multi‑View Representation</h1>
 <p align="center">
   <a href="https://arxiv.org/abs/2608.04720"><img src="https://img.shields.io/badge/arXiv-2608.04720-b31b1b.svg?style=flat-square" alt="arXiv"></a>
   <a href="https://github.com/zhangcbb/yolov14"><img src="https://img.shields.io/badge/GitHub-zhangcbb/yolov14-181717?style=flat-square&logo=github" alt="GitHub"></a>
@@ -14,7 +14,7 @@
 
 ## 📋 Table of Contents
 
-- [Why YOLOv14?](#-why-yolov14)
+- [Why YOLO?](#-why-yolo)
 - [Performance Highlights](#-performance-highlights)
 - [Project Roadmap & Status](#-project-roadmap--status)
 - [Architecture Overview](#-architecture-overview)
@@ -26,11 +26,11 @@
 
 ---
 
-## 🎯 Why YOLOv14?
+## 🎯 Why YOLO?
 
 Conventional detectors excel under ideal pinhole‑camera conditions, but degrade sharply in **real‑world non‑ideal imaging** scenarios. YOLOv14 learns **domain‑invariant, viewpoint‑robust** features via a combination of deformable attention, adaptive instance normalisation, and adversarial domain alignment:
 
-| Scenario | Problem | YOLOv14 Solution |
+| Scenario | Problem | YOLO Solution |
 |----------|---------|------------------|
 | **Fisheye / wide‑angle** | Barrel distortion shifts and compresses objects near edges | Deformable Area‑Attention (D‑AAttn) warps the feature grid to compensate for distortion |
 | **Game footage** (Delta Force, COD, PUBG) | Rendering style (posterisation, edge sharpening, high saturation) causes missed detections | Game2Real domain adaptation with AdaIN + adversarial domain classifier aligns feature distributions |
@@ -51,7 +51,7 @@ Conventional detectors excel under ideal pinhole‑camera conditions, but degrad
 | **Drone benchmark** | **43.2 mAP** (+6.4 ↑ over best baseline) |
 | **Fisheye benchmark** | **45.3 mAP** (+4.1 ↑ over best baseline) |
 
-> **YOLOv14 is the only real‑time detector that exceeds 43 mAP on all four challenging benchmarks at the same time.**
+> **YOLO is the only real‑time detector that exceeds 43 mAP on all four challenging benchmarks at the same time.**
 
 ---
 
@@ -71,7 +71,7 @@ Conventional detectors excel under ideal pinhole‑camera conditions, but degrad
 | ⏳ **TODO** | **Colab tutorials** | Step‑by‑step notebooks for fine‑tuning on custom data and running inference on videos. |
 | ⏳ **TODO** | **Hugging Face demo** | Online interactive demo integrated with 🤗 Spaces. |
 
-> **Note:** Even without the official weights, you can train YOLOv14 from scratch using the provided configs and your own dataset (e.g., COCO, VisDrone, or custom game screenshots). The codebase is fully functional and ready for research and development.
+> **Note:** Even without the official weights, you can train YOLO from scratch using the provided configs and your own dataset (e.g., COCO, VisDrone, or custom game screenshots). The codebase is fully functional and ready for research and development.
 
 ---
 
