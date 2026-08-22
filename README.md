@@ -4,7 +4,7 @@
   <a href="https://github.com/yolo"><img src="https://img.shields.io/badge/GitHub-z6378241/yolo-181717?style=flat-square&logo=github" alt="GitHub"></a>
 <p align="center">
   <a href="https://cheinralational.github.io/JianLu.io/"><img src="https://img.shields.io/badge/First_Author-Jian_Lu-blue?style=flat-square" alt="First Author"></a>
-  <a href="https://baike.baidu.com"><img src="https://img.shields.io/badge/Corresponding_Author-Zhang-green?style=flat-square" alt="Corresponding Author"></a>
+  <a href="https://baike.baidu.com"><img src="https://img.shields.io/badge/Corresponding_Author-Z6378241-green?style=flat-square" alt="Corresponding Author"></a>
 </p>
 <p align="center">
   <strong>The only real‑time detector that exceeds 43 mAP on all four challenging benchmarks – game, fisheye, drone, and panorama – simultaneously.</strong>
