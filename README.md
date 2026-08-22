@@ -1,7 +1,7 @@
 <h1 align="center">🚀 YOLO：Unified Cross-Domain Real‑Time Object Detection with Adaptive Multi‑View Representation</h1>
 <p align="center">
   <a href="https://arxiv.org/abs/2608.04720"><img src="https://img.shields.io/badge/arXiv-2608.04720-b31b1b.svg?style=flat-square" alt="arXiv"></a>
-  <a href="https://github.com/yolo"><img src="https://img.shields.io/badge/GitHub-zhangcbb/yolov14-181717?style=flat-square&logo=github" alt="GitHub"></a>
+  <a href="https://github.com/yolo"><img src="https://img.shields.io/badge/GitHub-z6378241/yolo-181717?style=flat-square&logo=github" alt="GitHub"></a>
 <p align="center">
   <a href="https://cheinralational.github.io/JianLu.io/"><img src="https://img.shields.io/badge/First_Author-Jian_Lu-blue?style=flat-square" alt="First Author"></a>
   <a href="https://baike.baidu.com/item/%E5%BC%A0%E6%99%A8%E6%96%8C/65145873"><img src="https://img.shields.io/badge/Corresponding_Author-Chenbin_Zhang-green?style=flat-square" alt="Corresponding Author"></a>
