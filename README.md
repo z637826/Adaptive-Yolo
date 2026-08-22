@@ -4,7 +4,7 @@
   <a href="https://github.com/yolo"><img src="https://img.shields.io/badge/GitHub-z6378241/yolo-181717?style=flat-square&logo=github" alt="GitHub"></a>
 <p align="center">
   <a href="https://cheinralational.github.io/JianLu.io/"><img src="https://img.shields.io/badge/First_Author-Jian_Lu-blue?style=flat-square" alt="First Author"></a>
-  <a href="https://baike.baidu.com"><img src="https://img.shields.io/badge/Corresponding_Author-Chenbin_Zhang-green?style=flat-square" alt="Corresponding Author"></a>
+  <a href="https://baike.baidu.com"><img src="https://img.shields.io/badge/Corresponding_Author-Zhang-green?style=flat-square" alt="Corresponding Author"></a>
 </p>
 <p align="center">
   <strong>The only real‑time detector that exceeds 43 mAP on all four challenging benchmarks – game, fisheye, drone, and panorama – simultaneously.</strong>
@@ -142,11 +142,11 @@ Three complementary mechanisms bridge the game‑rendering domain to the photogr
 
 | Variant | Key Modules | Target Scenario |
 |---------|-------------|-----------------|
-| `yolov14-deformable.yaml` | DeformableA2C2f | Fisheye / wide‑angle |
-| `yolov14-multiview.yaml` | ViewEmbedding + CrossViewLoss | Drone / BEV / mixed perspectives |
-| `yolov14-panorama.yaml` | SphereAAttn + CircularConv | 360° equirectangular |
-| `yolov14-game2real.yaml` | DomainAdaptiveLayer + DomainAdvLoss | Game character detection |
-| `yolov14-adaptive.yaml` | All components combined | Universal – auto scene detection |
+| `yolo-deformable.yaml` | DeformableA2C2f | Fisheye / wide‑angle |
+| `yolo-multiview.yaml` | ViewEmbedding + CrossViewLoss | Drone / BEV / mixed perspectives |
+| `yolo-panorama.yaml` | SphereAAttn + CircularConv | 360° equirectangular |
+| `yolo-game2real.yaml` | DomainAdaptiveLayer + DomainAdvLoss | Game character detection |
+| `yolo-adaptive.yaml` | All components combined | Universal – auto scene detection |
 
 ---
 
