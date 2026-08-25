@@ -1,7 +1,8 @@
-<h1 align="center">🚀 YOLO：Unified Cross-Domain Real‑Time Object Detection with Adaptive Multi‑View Representation</h1>
+<h1 align="center" style="color:#1F4E79;">Adaptive YOLO: Unified Cross-Domain Real‑Time Object Detection with Adaptive Multi‑View Representation</h1>
 <p align="center">
   <a href="https://arxiv.org/abs/2608.04720"><img src="https://img.shields.io/badge/arXiv-2608.04720-b31b1b.svg?style=flat-square" alt="arXiv"></a>
   <a href="https://github.com/yolo"><img src="https://img.shields.io/badge/GitHub-z637826/yolo-181717?style=flat-square&logo=github" alt="GitHub"></a>
+</p>
 <p align="center">
   <a href="https://cheinralational.github.io/JianLu.io/"><img src="https://img.shields.io/badge/First_Author-Jian_Lu-blue?style=flat-square" alt="First Author"></a>
   <a href="https://baike.baidu.com"><img src="https://img.shields.io/badge/Corresponding_Author-Z637826-green?style=flat-square" alt="Corresponding Author"></a>
@@ -10,27 +11,35 @@
   <strong>The only real‑time detector that exceeds 43 mAP on all four challenging benchmarks – game, fisheye, drone, and panorama – simultaneously.</strong>
 </p>
 
----
+<div align="center" style="background:#EAF2FD; border:1px solid #4A90D9; border-radius:8px; padding:10px 14px;">
+<strong style="color:#1F4E79;">Note:</strong> To avoid ambiguity, this project has been renamed from <strong>YOLO v14</strong> to <strong style="color:#1F4E79;">Adaptive YOLO</strong>.
+</div>
 
-## 📋 Table of Contents
-
-- [Why YOLO?](#-why-yolo)
-- [Performance Highlights](#-performance-highlights)
-- [Project Roadmap & Status](#-project-roadmap--status)
-- [Architecture Overview](#-architecture-overview)
-- [Core Components](#-core-components)
-- [Model Variants](#-model-variants)
-- [Quick Start](#-quick-start)
-- [Citation](#-citation)
-- [License](#-license)
+<div align="center" style="background:#FDF3E7; border:1px solid #E5A940; border-radius:8px; padding:10px 14px;">
+<strong style="color:#1F4E79;">Community Success:</strong> Congratulations to the team for successfully using <strong>Adaptive YOLO</strong> — read their full report <a href="https://mp.weixin.qq.com/s?__biz=Mzg2MTE4NDc0NA==&mid=2247519938&idx=1&sn=45d576efa2209ec44234cc2355b5cbef">here</a>.
+</div>
 
 ---
 
-## 🎯 Why YOLO?
+<h2 id="table-of-contents" style="background:#1F4E79; color:#ffffff; padding:8px 14px; border-radius:6px;">Table of Contents</h2>
 
-Conventional detectors excel under ideal pinhole‑camera conditions, but degrade sharply in **real‑world non‑ideal imaging** scenarios. YOLOv14 learns **domain‑invariant, viewpoint‑robust** features via a combination of deformable attention, adaptive instance normalisation, and adversarial domain alignment:
+- [Why Adaptive YOLO?](#why-adaptive-yolo)
+- [Performance Highlights](#performance-highlights)
+- [Project Roadmap & Status](#project-roadmap--status)
+- [Architecture Overview](#architecture-overview)
+- [Core Components](#core-components)
+- [Model Variants](#model-variants)
+- [Quick Start](#quick-start)
+- [Citation](#citation)
+- [License](#license)
 
-| Scenario | Problem | YOLO Solution |
+---
+
+<h2 id="why-adaptive-yolo" style="background:#1F4E79; color:#ffffff; padding:8px 14px; border-radius:6px;">Why Adaptive YOLO?</h2>
+
+Conventional detectors excel under ideal pinhole‑camera conditions, but degrade sharply in **real‑world non‑ideal imaging** scenarios. Adaptive YOLO learns **domain‑invariant, viewpoint‑robust** features via a combination of deformable attention, adaptive instance normalisation, and adversarial domain alignment:
+
+| Scenario | Problem | Adaptive YOLO Solution |
 |----------|---------|------------------|
 | **Fisheye / wide‑angle** | Barrel distortion shifts and compresses objects near edges | Deformable Area‑Attention (D‑AAttn) warps the feature grid to compensate for distortion |
 | **Game footage** (Delta Force, COD, PUBG) | Rendering style (posterisation, edge sharpening, high saturation) causes missed detections | Game2Real domain adaptation with AdaIN + adversarial domain classifier aligns feature distributions |
@@ -39,7 +48,7 @@ Conventional detectors excel under ideal pinhole‑camera conditions, but degrad
 
 ---
 
-## 📊 Performance Highlights
+<h2 id="performance-highlights" style="background:#1F4E79; color:#ffffff; padding:8px 14px; border-radius:6px;">Performance Highlights</h2>
 
 | Metric | Value |
 |--------|-------|
@@ -51,11 +60,11 @@ Conventional detectors excel under ideal pinhole‑camera conditions, but degrad
 | **Drone benchmark** | **43.2 mAP** (+6.4 ↑ over best baseline) |
 | **Fisheye benchmark** | **45.3 mAP** (+4.1 ↑ over best baseline) |
 
-> **YOLO is the only real‑time detector that exceeds 43 mAP on all four challenging benchmarks at the same time.**
+> **Adaptive YOLO is the only real‑time detector that exceeds 43 mAP on all four challenging benchmarks at the same time.**
 
 ---
 
-## 🗺️ Project Roadmap & Status
+<h2 id="project-roadmap--status" style="background:#1F4E79; color:#ffffff; padding:8px 14px; border-radius:6px;">Project Roadmap & Status</h2>
 
 > **Last updated:** August 2026
 
@@ -69,13 +78,13 @@ Conventional detectors excel under ideal pinhole‑camera conditions, but degrad
 | 🔄 **IN PROGRESS** | **Benchmark datasets** | Game character detection set, fisheye evaluation set, drone aerial set, and 360° panorama set are being prepared for public release under permissive licenses. *ETA: within weeks.* |
 | ⏳ **TODO** | **ONNX / TensorRT export** | Production‑ready deployment scripts with INT8 calibration and end‑to‑end latency optimisation. |
 | ⏳ **TODO** | **Colab tutorials** | Step‑by‑step notebooks for fine‑tuning on custom data and running inference on videos. |
-| ⏳ **TODO** | **Hugging Face demo** | Online interactive demo integrated with 🤗 Spaces. |
+| ⏳ **TODO** | **Hugging Face demo** | Online interactive demo integrated with Spaces. |
 
-> **Note:** Even without the official weights, you can train YOLO from scratch using the provided configs and your own dataset (e.g., COCO, VisDrone, or custom game screenshots). The codebase is fully functional and ready for research and development.
+> **Note:** Even without the official weights, you can train Adaptive YOLO from scratch using the provided configs and your own dataset (e.g., COCO, VisDrone, or custom game screenshots). The codebase is fully functional and ready for research and development.
 
 ---
 
-## 🏗️ Architecture Overview
+<h2 id="architecture-overview" style="background:#1F4E79; color:#ffffff; padding:8px 14px; border-radius:6px;">Architecture Overview</h2>
 
 ```
 Input → Scene Analysis → DomainAdaptiveLayer → ViewEmbedding →
@@ -93,9 +102,9 @@ The pipeline consists of six stages:
 
 ---
 
-## 🧩 Core Components
+<h2 id="core-components" style="background:#1F4E79; color:#ffffff; padding:8px 14px; border-radius:6px;">Core Components</h2>
 
-### 🔹 Deformable Area‑Attention (D‑AAttn)
+<h3 style="color:#1F4E79; border-left:4px solid #1F4E79; padding-left:10px;">Deformable Area‑Attention (D‑AAttn)</h3>
 
 Replaces standard area‑attention with a learnable 2D deformation field. The offset predictor warps the feature grid before computing attention, allowing the model to adapt to local geometric distortions.
 
@@ -107,7 +116,7 @@ Replaces standard area‑attention with a learnable 2D deformation field. The of
 
 **Complexity overhead:** only **+4.7%** parameters and **+4.1%** FLOPs per layer.
 
-### 🔹 Game2Real Domain Adaptation
+<h3 style="color:#1F4E79; border-left:4px solid #1F4E79; padding-left:10px;">Game2Real Domain Adaptation</h3>
 
 Three complementary mechanisms bridge the game‑rendering domain to the photographic domain:
 
@@ -120,25 +129,25 @@ Three complementary mechanisms bridge the game‑rendering domain to the photogr
 - +DomainAdaptiveLayer: +6.5 mAP
 - +DomainAdversarialLoss: +7.3 mAP
 
-### 🔹 Multi‑View Conditioning
+<h3 style="color:#1F4E79; border-left:4px solid #1F4E79; padding-left:10px;">Multi‑View Conditioning</h3>
 
 `ViewEmbedding` injects a learned 6‑class embedding (pinhole=0, fisheye=1, panoramic=2, drone=3, bev=4, ground=5) into backbone features via concatenation and 1×1 projection. `CrossViewConsistencyLoss` (NT‑Xent contrastive) pulls same‑class features from different views closer in embedding space.
 
 **Theoretical guarantee:** Minimising $\mathcal{L}_{\text{cross}}$ bounds the $\mathcal{H}\Delta\mathcal{H}$‑distance between view‑specific distributions.
 
-### 🔹 Adaptive Augmentation & Dynamic Routing
+<h3 style="color:#1F4E79; border-left:4px solid #1F4E79; padding-left:10px;">Adaptive Augmentation & Dynamic Routing</h3>
 
 - **AdaptiveAugmentPolicy** – analyses each input via edge density, saturation mean, and contrast variance heuristics, then selects the optimal augmentation branch.
 - **DynamicScaleRouter** – a lightweight gating network (1.8K params, 0.06 ms) that learns per‑input scale importance weights for P3/P4/P5.
 
-### 🔹 Panoramic‑Specific Modules
+<h3 style="color:#1F4E79; border-left:4px solid #1F4E79; padding-left:10px;">Panoramic‑Specific Modules</h3>
 
 - **CircularConv** – circular padding replaces zero‑padding in the horizontal dimension, connecting $x=W-1$ to $x=0$.
 - **SphereAAttn** – partitions the feature map into latitude bands; equatorial bands receive proportionally more capacity than polar bands.
 
 ---
 
-## 📦 Model Variants
+<h2 id="model-variants" style="background:#1F4E79; color:#ffffff; padding:8px 14px; border-radius:6px;">Model Variants</h2>
 
 | Variant | Key Modules | Target Scenario |
 |---------|-------------|-----------------|
@@ -150,11 +159,11 @@ Three complementary mechanisms bridge the game‑rendering domain to the photogr
 
 ---
 
-## 🚀 Quick Start
+<h2 id="quick-start" style="background:#1F4E79; color:#ffffff; padding:8px 14px; border-radius:6px;">Quick Start</h2>
 
 ```bash
-conda create -n yolov14 python=3.11
-conda activate yolov14
+conda create -n adaptiveyolo python=3.11
+conda activate adaptiveyolo
 pip install -r requirements.txt
 pip install -e .
 ```
@@ -162,13 +171,13 @@ pip install -e .
 **Train Game2Real model:**
 ```python
 from ultralytics import YOLO
-model = YOLO("ultralytics/cfg/models/v14/yolov14-game2real.yaml")
+model = YOLO("ultralytics/cfg/models/yolo-game2real.yaml")
 model.train(data="coco.yaml", epochs=300, imgsz=640)
 ```
 
 **Train Adaptive model (all innovations):**
 ```python
-model = YOLO("ultralytics/cfg/models/v14/yolov14-adaptive.yaml")
+model = YOLO("ultralytics/cfg/models/yolo-adaptive.yaml")
 model.train(data="coco.yaml", epochs=300, imgsz=640)
 ```
 
@@ -186,20 +195,22 @@ python app.py
 
 ---
 
-## 📝 Citation
+<h2 id="citation" style="background:#1F4E79; color:#ffffff; padding:8px 14px; border-radius:6px;">Citation</h2>
 
 ```bibtex
-@article{jia2026yolov14,
-  title={YOLOv14: Unified Cross-Domain Real-Time Object Detection with Adaptive Multi-View Representation},
+@article{jia2026adaptiveyolo,
+  title={Adaptive YOLO: Unified Cross-Domain Real-Time Object Detection with Adaptive Multi-View Representation},
   author={Jia, Jinling and Lu, Jian and Yawl, Jone and Zhang, Chenbin},
   journal={arXiv preprint arXiv:2608.04720},
   year={2026}
 }
 ```
 
+> **Note:** The paper is currently under further revision and review.
+
 ---
 
-## 📄 License
+<h2 id="license" style="background:#1F4E79; color:#ffffff; padding:8px 14px; border-radius:6px;">License</h2>
 
 [AGPL-3.0](LICENSE)
 
