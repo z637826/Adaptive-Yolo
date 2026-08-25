@@ -16,7 +16,7 @@
 </div>
 
 <div align="center" style="background:#FDF3E7; border:1px solid #E5A940; border-radius:8px; padding:10px 14px;">
-<strong style="color:#1F4E79;">Community Success:</strong> Congratulations to the team for successfully using <strong>Adaptive YOLO</strong> — read their full report <a href="https://mp.weixin.qq.com/s?__biz=Mzg2MTE4NDc0NA==&mid=2247519938&idx=1&sn=45d576efa2209ec44234cc2355b5cbef">here</a>.
+<strong style="color:#1F4E79;">Congratulations to the teachers and students of Harbin Media Vocational College</strong> on winning Third Prize in the New-Generation Information Technology track of the Provincial Vocational College Skills Competition! Their project tackled real corn-planting challenges, using <strong>Adaptive YOLO</strong> (this project) as the core deep-learning algorithm for disease recognition, precise localization, and multi-terminal deployment, and was completed steadily through the 60-minute timed contest and technical defense. Read the full report <a href="https://mp.weixin.qq.com/s?__biz=Mzg2MTE4NDc0NA==&mid=2247519938&idx=1&sn=45d576efa2209ec44234cc2355b5cbef">here</a>.
 </div>
 
 ---
