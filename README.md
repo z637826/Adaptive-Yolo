@@ -12,7 +12,7 @@
 </p>
 
 <div align="center" style="background:#EAF2FD; border:1px solid #4A90D9; border-radius:8px; padding:10px 14px;">
-<strong style="color:#1F4E79;">Note:</strong> To avoid ambiguity, this project has been renamed from <strong>YOLO v14</strong> to <strong style="color:#1F4E79;">Adaptive YOLO</strong>.
+<strong style="color:#1F4E79;">Note:</strong> We name our detector YOLO‑Omni to highlight its capability for omni‑distortion robust detection across fisheye, panorama, aerial and game‑rendered domains.
 </div>
 
 <div align="center" style="background:#FDF3E7; border:1px solid #E5A940; border-radius:8px; padding:10px 14px;">
