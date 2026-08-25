@@ -1,4 +1,4 @@
-<h1 align="center" style="color:#1F4E79;">Adaptive YOLO: Unified Cross-Domain Real‑Time Object Detection with Adaptive Multi‑View Representation</h1>
+<h1 align="center" style="color:#1F4E79;">YOLO‑Omni: Omni‑Distortion Adaptive Routing with Sparse Target‑Prior for Real‑Time Object Detection</h1>
 <p align="center">
   <a href="https://arxiv.org/abs/2608.04720"><img src="https://img.shields.io/badge/arXiv-2608.04720-b31b1b.svg?style=flat-square" alt="arXiv"></a>
   <a href="https://github.com/yolo"><img src="https://img.shields.io/badge/GitHub-z637826/yolo-181717?style=flat-square&logo=github" alt="GitHub"></a>
