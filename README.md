@@ -1,10 +1,5 @@
 <h1 align="center" style="color:#1F4E79;">YOLO‑Omni: Omni‑Distortion Adaptive Routing with Sparse Target‑Prior for Real‑Time Object Detection</h1>
 <p align="center">
-  <a href="https://arxiv.org/abs/2608.04720"><img src="https://img.shields.io/badge/arXiv-2608.04720-b31b1b.svg?style=flat-square" alt="arXiv"></a>
-  <a href="https://github.com/yolo"><img src="https://img.shields.io/badge/GitHub-z637826/yolo-181717?style=flat-square&logo=github" alt="GitHub"></a>
-</p>
-<p align="center">
-  <a href="https://cheinralational.github.io/JianLu.io/"><img src="https://img.shields.io/badge/First_Author-Jian_Lu-blue?style=flat-square" alt="First Author"></a>
   <a href="https://baike.baidu.com"><img src="https://img.shields.io/badge/Corresponding_Author-Z637826-green?style=flat-square" alt="Corresponding Author"></a>
 </p>
 <p align="center">
@@ -16,30 +11,29 @@
 </div>
 
 <div align="center" style="background:#FDF3E7; border:1px solid #E5A940; border-radius:8px; padding:10px 14px;">
-<strong style="color:#1F4E79;">Congratulations to the teachers and students of Harbin Media Vocational College</strong> on winning Third Prize in the New-Generation Information Technology track of the Provincial Vocational College Skills Competition! Their project tackled real corn-planting challenges, using <strong>Adaptive YOLO</strong> (this project) as the core deep-learning algorithm for disease recognition, precise localization, and multi-terminal deployment, and was completed steadily through the 60-minute timed contest and technical defense. Read the full report <a href="https://mp.weixin.qq.com/s?__biz=Mzg2MTE4NDc0NA==&mid=2247519938&idx=1&sn=45d576efa2209ec44234cc2355b5cbef">here</a>.
+<strong style="color:#1F4E79;">Congratulations to the teachers and students of Harbin Media Vocational College</strong> on winning Third Prize in the New-Generation Information Technology track of the Provincial Vocational College Skills Competition! Their project tackled real corn-planting challenges, using <strong>YOLO-Omni</strong> (this project) as the core deep-learning algorithm for disease recognition, precise localization, and multi-terminal deployment, and was completed steadily through the 60-minute timed contest and technical defense. Read the full report <a href="https://mp.weixin.qq.com/s?__biz=Mzg2MTE4NDc0NA==&mid=2247519938&idx=1&sn=45d576efa2209ec44234cc2355b5cbef">here</a>.
 </div>
 
 ---
 
 <h2 id="table-of-contents" style="background:#1F4E79; color:#ffffff; padding:8px 14px; border-radius:6px;">Table of Contents</h2>
 
-- [Why Adaptive YOLO?](#why-adaptive-yolo)
+- [Why YOLO-Omni?](#why-yolo-omni)
 - [Performance Highlights](#performance-highlights)
 - [Project Roadmap & Status](#project-roadmap--status)
 - [Architecture Overview](#architecture-overview)
 - [Core Components](#core-components)
 - [Model Variants](#model-variants)
 - [Quick Start](#quick-start)
-- [Citation](#citation)
 - [License](#license)
 
 ---
 
-<h2 id="why-adaptive-yolo" style="background:#1F4E79; color:#ffffff; padding:8px 14px; border-radius:6px;">Why Adaptive YOLO?</h2>
+<h2 id="why-yolo-omni" style="background:#1F4E79; color:#ffffff; padding:8px 14px; border-radius:6px;">Why YOLO-Omni?</h2>
 
-Conventional detectors excel under ideal pinhole‑camera conditions, but degrade sharply in **real‑world non‑ideal imaging** scenarios. Adaptive YOLO learns **domain‑invariant, viewpoint‑robust** features via a combination of deformable attention, adaptive instance normalisation, and adversarial domain alignment:
+Conventional detectors excel under ideal pinhole‑camera conditions, but degrade sharply in **real‑world non‑ideal imaging** scenarios. YOLO-Omni learns **domain‑invariant, viewpoint‑robust** features via a combination of deformable attention, adaptive instance normalisation, and adversarial domain alignment:
 
-| Scenario | Problem | Adaptive YOLO Solution |
+| Scenario | Problem | YOLO-Omni Solution |
 |----------|---------|------------------|
 | **Fisheye / wide‑angle** | Barrel distortion shifts and compresses objects near edges | Deformable Area‑Attention (D‑AAttn) warps the feature grid to compensate for distortion |
 | **Game footage** (Delta Force, COD, PUBG) | Rendering style (posterisation, edge sharpening, high saturation) causes missed detections | Game2Real domain adaptation with AdaIN + adversarial domain classifier aligns feature distributions |
@@ -60,7 +54,7 @@ Conventional detectors excel under ideal pinhole‑camera conditions, but degrad
 | **Drone benchmark** | **43.2 mAP** (+6.4 ↑ over best baseline) |
 | **Fisheye benchmark** | **45.3 mAP** (+4.1 ↑ over best baseline) |
 
-> **Adaptive YOLO is the only real‑time detector that exceeds 43 mAP on all four challenging benchmarks at the same time.**
+> **YOLO-Omni is the only real‑time detector that exceeds 43 mAP on all four challenging benchmarks at the same time.**
 
 ---
 
@@ -80,7 +74,7 @@ Conventional detectors excel under ideal pinhole‑camera conditions, but degrad
 | ⏳ **TODO** | **Colab tutorials** | Step‑by‑step notebooks for fine‑tuning on custom data and running inference on videos. |
 | ⏳ **TODO** | **Hugging Face demo** | Online interactive demo integrated with Spaces. |
 
-> **Note:** Even without the official weights, you can train Adaptive YOLO from scratch using the provided configs and your own dataset (e.g., COCO, VisDrone, or custom game screenshots). The codebase is fully functional and ready for research and development.
+> **Note:** Even without the official weights, you can train YOLO-Omni from scratch using the provided configs and your own dataset (e.g., COCO, VisDrone, or custom game screenshots). The codebase is fully functional and ready for research and development.
 
 ---
 
@@ -162,8 +156,8 @@ Three complementary mechanisms bridge the game‑rendering domain to the photogr
 <h2 id="quick-start" style="background:#1F4E79; color:#ffffff; padding:8px 14px; border-radius:6px;">Quick Start</h2>
 
 ```bash
-conda create -n adaptiveyolo python=3.11
-conda activate adaptiveyolo
+conda create -n yoloomni python=3.11
+conda activate yoloomni
 pip install -r requirements.txt
 pip install -e .
 ```
@@ -175,7 +169,7 @@ model = YOLO("ultralytics/cfg/models/yolo-game2real.yaml")
 model.train(data="coco.yaml", epochs=300, imgsz=640)
 ```
 
-**Train Adaptive model (all innovations):**
+**Train YOLO-Omni model (all innovations):**
 ```python
 model = YOLO("ultralytics/cfg/models/yolo-adaptive.yaml")
 model.train(data="coco.yaml", epochs=300, imgsz=640)
@@ -192,21 +186,6 @@ results[0].show()
 python app.py
 # Visit http://127.0.0.1:7860
 ```
-
----
-
-<h2 id="citation" style="background:#1F4E79; color:#ffffff; padding:8px 14px; border-radius:6px;">Citation</h2>
-
-```bibtex
-@article{jia2026adaptiveyolo,
-  title={Adaptive YOLO: Unified Cross-Domain Real-Time Object Detection with Adaptive Multi-View Representation},
-  author={Jia, Jinling and Lu, Jian and Yawl, Jone and Zhang, Chenbin},
-  journal={arXiv preprint arXiv:2608.04720},
-  year={2026}
-}
-```
-
-> **Note:** The paper is currently under further revision and review.
 
 ---
 
